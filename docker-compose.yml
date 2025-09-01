@@ -28,8 +28,8 @@ services:
       MYSQL_USER: '${DB_USERNAME}'
       MYSQL_PASSWORD: '${DB_PASSWORD}'
       MYSQL_ROOT_PASSWORD: '${DB_ROOT_PASSWORD}'
-  #    ports:
-  #      - 3356:3306
+    ports:
+      - 3356:3306
 
   phpmyadmin:
     image: phpmyadmin:latest
@@ -39,3 +39,5 @@ services:
       PMA_HOST: '${DB_HOST}'
       PMA_USER: '${DB_USERNAME}'
       PMA_PASSWORD: '${DB_PASSWORD}'
+    ports:
+      - 1080:80
